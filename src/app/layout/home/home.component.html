@@ -1,0 +1,15 @@
+<nav class="navbar fixed-top navbar-light bg-white">
+  <div class="container">
+    <div class="logo"></div>
+    <div>
+      <div class="add-post" data-toggle="modal" data-target="#modalNewPost"></div>
+      <a href="" (click)="logout()" class="ml-3">Sair</a>
+    </div>
+  </div>  
+</nav>
+
+<br /><br /><br />
+<div class="container">
+  <app-publicacoes #publications></app-publicacoes>
+  <app-include-publication (updateTimeLine)="updateTimeLine()"></app-include-publication>
+</div>
