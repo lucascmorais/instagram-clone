@@ -1,0 +1,13 @@
+runtime: python27
+api_version: '1'
+env: standard
+threadsafe: true
+instance_class: F1
+handlers:
+  - url: /(.*)
+    application_readable: false
+    http_headers:
+      Access-Control-Allow-Origin: '*'
+    static_files: dist/\1
+    require_matching_file: false
+    upload: dist/.*
